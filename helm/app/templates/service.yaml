@@ -10,7 +10,7 @@ spec:
   ports:
     - port: {{ .port }}
       protocol: TCP
-      name: {{ .name }}
+      targetPort: {{ .port }}
   selector:
     {{- include "quarkus-template.selectorLabels" $ | nindent 4 }}
 {{- end }}
